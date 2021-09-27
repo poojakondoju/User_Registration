@@ -30,8 +30,8 @@ public class UserRegistration {
 		/*
 		 * Password It contain minimum 8 characters. It contain at least 1 upper case
 		 */
-		System.out.println(Pattern.matches("^(?=.*[A-Z])[A-Za-z0-9]{8,}", "asdfA123")); // true
-		System.out.println(Pattern.matches("^(?=.*[A-Z])[A-Za-z0-9]{8,}", "asd123")); // false
+		System.out.println(Pattern.matches("^(?=.*[A-Z])(?=.*[0-9])[A-Za-z0-9]{8,}", "asdfA5kad")); // true
+		System.out.println(Pattern.matches("^(?=.*[A-Z])(?=.*[0-9])[A-Za-z0-9]{8,}", "asdAdrGh")); // false
 
 	}
 }
