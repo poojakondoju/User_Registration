@@ -20,5 +20,18 @@ public class UserRegistration {
 		 */
 		System.out.println(Pattern.matches("[A-Z]{1}[a-zA-Z0-9]{2,}", "Sai7")); // true
 		System.out.println(Pattern.matches("[A-Z]{1}[a-zA-Z0-9]{2,}", "sai")); // false
+
+		/*
+		 * Email
+		 */
+		System.out.println(Pattern.matches("^([a-z0-9]+.)+@([a-z0-9]+.)([a-z]+.)[a-z]{2,3}+$", "abc.100@yahoo.com")); // true
+		System.out.println(Pattern.matches("^([a-z0-9]+.)+@([a-z0-9]+.)([a-z]+.)[a-z]{2,3}+$", "abc123@.com.com")); // false
+
+		/*
+		 * Mobile Number country code and 10 digit number
+		 */
+		System.out.println(Pattern.matches("[0-9]{2}[ ]{1}[0-9]{10}", "91 8400998800")); // true
+		System.out.println(Pattern.matches("[0-9]{2}[ ]{1}[0-9]{10}", "8400998800")); // false
+
 	}
 }
