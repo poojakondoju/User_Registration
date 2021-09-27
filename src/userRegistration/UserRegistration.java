@@ -27,5 +27,11 @@ public class UserRegistration {
 		System.out.println(Pattern.matches("[0-9]{2}[ ]{1}[0-9]{10}", "91 8400998800")); // true
 		System.out.println(Pattern.matches("[0-9]{2}[ ]{1}[0-9]{10}", "8400998800")); // false
 
+		/*
+		 * Password It contain minimum 8 characters.
+		 */
+		System.out.println(Pattern.matches("[A-Za-z0-9]{8,}", "asdfg123")); // true
+		System.out.println(Pattern.matches("[A-Za-z0-9]{8,}", "asd123")); // false
+
 	}
 }
