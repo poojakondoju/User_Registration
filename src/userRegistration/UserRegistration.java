@@ -1,5 +1,6 @@
 package userRegistration;
 
+import java.util.Scanner;
 import java.util.regex.Pattern;
 
 public class UserRegistration {
@@ -8,6 +9,9 @@ public class UserRegistration {
 	 */
 	public static void main(String[] args) {
 		System.out.println("Welcome to User Registration....");
+		Scanner scanner = new Scanner(System.in);
+		String mail;
+		char check;
 		/*
 		 * First Name First letter mush be in capital and remaining letters must be 2 or
 		 * more characters
@@ -24,8 +28,13 @@ public class UserRegistration {
 		/*
 		 * Email
 		 */
-		System.out.println(Pattern.matches("^([a-z0-9]+.)+@([a-z0-9]+.)([a-z]+.)[a-z]{2,3}+$", "abc.100@yahoo.com")); // true
-		System.out.println(Pattern.matches("^([a-z0-9]+.)+@([a-z0-9]+.)([a-z]+.)[a-z]{2,3}+$", "abc123@.com.com")); // false
+		do {
+			System.out.println("Enter Email id:");
+			mail = scanner.next();
+			System.out.println(Pattern.matches("^([a-z0-9]+.)+@([a-z0-9]+.)([a-z]+.)[a-z]{2,3}+$", mail)); // true
+			System.out.println("Test another Mail id (y/n)");
+			check = scanner.next().charAt(0);
+		} while (check == 'y');
 
 		/*
 		 * Mobile Number country code and 10 digit number
